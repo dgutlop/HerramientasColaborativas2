@@ -1,0 +1,572 @@
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB$ git config --global user.name "dgutlop"
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB$ git config --global user.email "dgutlop5@gmail.com"
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB$ git config --global alias.s "status -s"
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB$ ^[[200~git config --global --get user.name
+git: no se encontró la orden
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB$ git config --global --get user.email
+dgutlop5@gmail.com
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB$ git config --global --get alias.s
+status -s
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB$ git config --global --get user.name
+git config --global --get user.email
+git config --global --get alias.s
+dgutlop
+dgutlop5@gmail.com
+status -s
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB$ mkdir portfolio-git
+cd portfolio-git
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ touch index.html style.css
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git add .
+fatal: no es un repositorio git (ni ninguno de los directorios superiores): .git
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git init
+ayuda: Usando 'master' como el nombre de la rama inicial. Este nombre de rama predeterminado
+ayuda: está sujeto a cambios. Para configurar el nombre de la rama inicial para usar en todos
+ayuda: de sus nuevos repositorios, reprimiendo esta advertencia, llama a:
+ayuda: 
+ayuda:  git config --global init.defaultBranch <nombre>
+ayuda: 
+ayuda: Los nombres comúnmente elegidos en lugar de 'master' son 'main', 'trunk' y
+ayuda: 'development'. Se puede cambiar el nombre de la rama recién creada mediante este comando:
+ayuda: 
+ayuda:  git branch -m <nombre>
+Inicializado repositorio Git vacío en /home/alumno05/git/GITHUB/portfolio-git/.git/
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git add .
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git s
+A  index.html
+A  style.css
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git init
+Reinicializado el repositorio Git existente en /home/alumno05/git/GITHUB/portfolio-git/.git/
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git commit -m "Commit inicial con estructura del HTML y CSS"
+[master (commit-raíz) 183eb1c] Commit inicial con estructura del HTML y CSS
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+ create mode 100644 style.css
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git log --oneline
+183eb1c (HEAD -> master) Commit inicial con estructura del HTML y CSS
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git remote add origin https://github.com/dgutlop/HerramientasColaborativas2.git
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git branch -M main
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git push -u origin main
+Enumerando objetos: 3, listo.
+Contando objetos: 100% (3/3), listo.
+Compresión delta usando hasta 6 hilos
+Comprimiendo objetos: 100% (2/2), listo.
+Escribiendo objetos: 100% (3/3), 249 bytes | 249.00 KiB/s, listo.
+Total 3 (delta 0), reusados 0 (delta 0), pack-reusados 0
+To https://github.com/dgutlop/HerramientasColaborativas2.git
+ * [new branch]      main -> main
+rama 'main' configurada para rastrear 'origin/main'.
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git s
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git checkout -b feature/proyectos
+Cambiado a nueva rama 'feature/proyectos'
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git branch
+* feature/proyectos
+  main
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git s
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git add index.html
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git commit -m "Añadir seccion de proyectos"
+En la rama feature/proyectos
+nada para hacer commit, el árbol de trabajo está limpio
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git add style.css
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git commit -m "CSS: Añadir seccion de proyectos"
+En la rama feature/proyectos
+nada para hacer commit, el árbol de trabajo está limpio
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git status
+En la rama feature/proyectos
+nada para hacer commit, el árbol de trabajo está limpio
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ cat index.html
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git add index.html
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git commit -m "Añadir seccion de proyectos"
+[feature/proyectos ad74eb8] Añadir seccion de proyectos
+ 1 file changed, 27 insertions(+)
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git add style.css
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git commit -m "CSS: Añadir seccion de proyectos"
+[feature/proyectos f74e1e4] CSS: Añadir seccion de proyectos
+ 1 file changed, 33 insertions(+)
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ 
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ 
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git log--oneline --decorate
+git: 'log--oneline' no es un comando de git. Mira 'git --help'.
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git log --oneline --decorate
+f74e1e4 (HEAD -> feature/proyectos) CSS: Añadir seccion de proyectos
+ad74eb8 Añadir seccion de proyectos
+183eb1c (origin/main, main) Commit inicial con estructura del HTML y CSS
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ ^[[200~git branch
+git: no se encontró la orden
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git branch
+* feature/proyectos
+  main
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git push -u origin feature/proyectos
+Enumerando objetos: 9, listo.
+Contando objetos: 100% (9/9), listo.
+Compresión delta usando hasta 6 hilos
+Comprimiendo objetos: 100% (8/8), listo.
+Escribiendo objetos: 100% (9/9), 1.43 KiB | 1.43 MiB/s, listo.
+Total 9 (delta 0), reusados 0 (delta 0), pack-reusados 0
+remote: 
+remote: Create a pull request for 'feature/proyectos' on GitHub by visiting:
+remote:      https://github.com/dgutlop/HerramientasColaborativas2/pull/new/feature/proyectos
+remote: 
+To https://github.com/dgutlop/HerramientasColaborativas2.git
+ * [new branch]      feature/proyectos -> feature/proyectos
+rama 'feature/proyectos' configurada para rastrear 'origin/feature/proyectos'.
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git branch -a
+* feature/proyectos
+  main
+  remotes/origin/feature/proyectos
+  remotes/origin/main
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git branch
+* feature/proyectos
+  main
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git status
+En la rama feature/proyectos
+Tu rama está actualizada con 'origin/feature/proyectos'.
+
+nada para hacer commit, el árbol de trabajo está limpio
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git status
+En la rama feature/proyectos
+Tu rama está actualizada con 'origin/feature/proyectos'.
+
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+        modificados:     index.html
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git add index.html
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git commit -m
+error: switch `m' requiere un valor
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git commit
+Abortando commit debido que el mensaje está en blanco.
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git commit -m "Actualizando HTML"
+[feature/proyectos eee76f1] Actualizando HTML
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git push
+Enumerando objetos: 5, listo.
+Contando objetos: 100% (5/5), listo.
+Compresión delta usando hasta 6 hilos
+Comprimiendo objetos: 100% (3/3), listo.
+Escribiendo objetos: 100% (3/3), 321 bytes | 321.00 KiB/s, listo.
+Total 3 (delta 1), reusados 0 (delta 0), pack-reusados 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/dgutlop/HerramientasColaborativas2.git
+   f74e1e4..eee76f1  feature/proyectos -> feature/proyectos
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git status
+En la rama feature/proyectos
+Tu rama está actualizada con 'origin/feature/proyectos'.
+
+nada para hacer commit, el árbol de trabajo está limpio
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git checkout main
+git pull
+git checkout -b hotfix/nav-color
+Cambiado a rama 'main'
+Tu rama está actualizada con 'origin/main'.
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Desempaquetando objetos: 100% (3/3), 241.69 KiB | 1.33 MiB/s, listo.
+Desde https://github.com/dgutlop/HerramientasColaborativas2
+   183eb1c..b5938e4  main       -> origin/main
+Actualizando 183eb1c..b5938e4
+Fast-forward
+ Captura desde 2026-02-13 08-51-42.png | Bin 0 -> 256382 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Captura desde 2026-02-13 08-51-42.png
+Cambiado a nueva rama 'hotfix/nav-color'
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git branch
+  feature/proyectos
+* hotfix/nav-color
+  main
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git status
+En la rama hotfix/nav-color
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+        modificados:     index.html
+        modificados:     style.css
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git add style.css
+git commit -m "Creacion de rama hotfix:cambio de color"
+[hotfix/nav-color b3ce6be] Creacion de rama hotfix:cambio de color
+ 1 file changed, 33 insertions(+)
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git checkout main
+M       index.html
+Cambiado a rama 'main'
+Tu rama está actualizada con 'origin/main'.
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git merge hotfix/nav-color
+Actualizando b5938e4..b3ce6be
+Fast-forward
+ style.css | 33 +++++++++++++++++++++++++++++++++
+ 1 file changed, 33 insertions(+)
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git branch -d hotfix/nav-color
+Eliminada la rama hotfix/nav-color (era b3ce6be).
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git checkout feature/proyectos
+error: Los cambios locales de los siguientes archivos serán sobrescritos por checkout:
+        index.html
+Por favor realice un commit con los cambios o un stash antes de cambiar ramas.
+Abortando
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git push origin main
+Enumerando objetos: 5, listo.
+Contando objetos: 100% (5/5), listo.
+Compresión delta usando hasta 6 hilos
+Comprimiendo objetos: 100% (3/3), listo.
+Escribiendo objetos: 100% (3/3), 566 bytes | 566.00 KiB/s, listo.
+Total 3 (delta 1), reusados 0 (delta 0), pack-reusados 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/dgutlop/HerramientasColaborativas2.git
+   b5938e4..b3ce6be  main -> main
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git branch
+  feature/proyectos
+* main
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git checkout feature/proyectos
+git status
+error: Los cambios locales de los siguientes archivos serán sobrescritos por checkout:
+        index.html
+Por favor realice un commit con los cambios o un stash antes de cambiar ramas.
+Abortando
+En la rama main
+Tu rama está actualizada con 'origin/main'.
+
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+        modificados:     index.html
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git add index.html
+git commit -m ""
+Abortando commit debido que el mensaje está en blanco.
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git commit -m "Añadir index.html"
+[main 5d62afe] Añadir index.html
+ 1 file changed, 27 insertions(+)
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git checkout feature/proyectos
+Cambiado a rama 'feature/proyectos'
+Tu rama está actualizada con 'origin/feature/proyectos'.
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git merge main
+Auto-fusionando style.css
+CONFLICTO (contenido): Conflicto de fusión en style.css
+Fusión automática falló; arregle los conflictos y luego realice un commit con el resultado.
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git add style.css
+git commit
+[feature/proyectos 10b2d64] Merge branch 'main' into feature/proyectos
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git log --oneline --decorate -5
+10b2d64 (HEAD -> feature/proyectos) Merge branch 'main' into feature/proyectos
+5d62afe (main) Añadir index.html
+b3ce6be (origin/main) Creacion de rama hotfix:cambio de color
+eee76f1 (origin/feature/proyectos) Actualizando HTML
+b5938e4 Add files via upload
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git status
+En la rama feature/proyectos
+Tu rama está adelantada a 'origin/feature/proyectos' por 4 commits.
+  (usa "git push" para publicar tus commits locales)
+
+nada para hacer commit, el árbol de trabajo está limpio
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git log --oneline --decorate -8
+10b2d64 (HEAD -> feature/proyectos) Merge branch 'main' into feature/proyectos
+5d62afe (main) Añadir index.html
+b3ce6be (origin/main) Creacion de rama hotfix:cambio de color
+eee76f1 (origin/feature/proyectos) Actualizando HTML
+b5938e4 Add files via upload
+f74e1e4 CSS: Añadir seccion de proyectos
+ad74eb8 Añadir seccion de proyectos
+183eb1c Commit inicial con estructura del HTML y CSS
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git push
+Enumerando objetos: 9, listo.
+Contando objetos: 100% (9/9), listo.
+Compresión delta usando hasta 6 hilos
+Comprimiendo objetos: 100% (5/5), listo.
+Escribiendo objetos: 100% (5/5), 620 bytes | 620.00 KiB/s, listo.
+Total 5 (delta 2), reusados 0 (delta 0), pack-reusados 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/dgutlop/HerramientasColaborativas2.git
+   eee76f1..10b2d64  feature/proyectos -> feature/proyectos
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git status
+En la rama feature/proyectos
+Tu rama está actualizada con 'origin/feature/proyectos'.
+
+nada para hacer commit, el árbol de trabajo está limpio
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git add index.html
+git commit -m "Actualizado a Ingeniero de Software"
+[feature/proyectos 8422283] Actualizado a Ingeniero de Software
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git checkout main
+Cambiado a rama 'main'
+Tu rama está adelantada a 'origin/main' por 1 commit.
+  (usa "git push" para publicar tus commits locales)
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git push
+Total 0 (delta 0), reusados 0 (delta 0), pack-reusados 0
+To https://github.com/dgutlop/HerramientasColaborativas2.git
+   b3ce6be..5d62afe  main -> main
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git add index.html
+git commit -m "Especialista en Web"
+[main 7e8273b] Especialista en Web
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git push
+Enumerando objetos: 5, listo.
+Contando objetos: 100% (5/5), listo.
+Compresión delta usando hasta 6 hilos
+Comprimiendo objetos: 100% (3/3), listo.
+Escribiendo objetos: 100% (3/3), 393 bytes | 393.00 KiB/s, listo.
+Total 3 (delta 1), reusados 0 (delta 0), pack-reusados 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/dgutlop/HerramientasColaborativas2.git
+   5d62afe..7e8273b  main -> main
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git merge feature/proyectos
+Auto-fusionando index.html
+CONFLICTO (contenido): Conflicto de fusión en index.html
+Fusión automática falló; arregle los conflictos y luego realice un commit con el resultado.
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git add index.html
+git commit
+git push
+[main 6917d55] Merge branch 'feature/proyectos'
+Enumerando objetos: 10, listo.
+Contando objetos: 100% (10/10), listo.
+Compresión delta usando hasta 6 hilos
+Comprimiendo objetos: 100% (6/6), listo.
+Escribiendo objetos: 100% (6/6), 821 bytes | 821.00 KiB/s, listo.
+Total 6 (delta 2), reusados 0 (delta 0), pack-reusados 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/dgutlop/HerramientasColaborativas2.git
+   7e8273b..6917d55  main -> main
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git log --oneline --decorate -8
+6917d55 (HEAD -> main, origin/main) Merge branch 'feature/proyectos'
+7e8273b Especialista en Web
+8422283 (feature/proyectos) Actualizado a Ingeniero de Software
+10b2d64 (origin/feature/proyectos) Merge branch 'main' into feature/proyectos
+5d62afe Añadir index.html
+b3ce6be Creacion de rama hotfix:cambio de color
+eee76f1 Actualizando HTML
+b5938e4 Add files via upload
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ grep -n "Especialista" -n index.html
+grep -n "Ingeniero" -n index.html
+15:      <p>Ingeniero de software y Especialista en WEB</p>
+15:      <p>Ingeniero de software y Especialista en WEB</p>
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git checkout main
+Ya en 'main'
+Tu rama está actualizada con 'origin/main'.
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git checkout -b feature/footer
+Cambiado a nueva rama 'feature/footer'
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git branch
+* feature/footer
+  feature/proyectos
+  main
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git status
+En la rama feature/footer
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+        modificados:     index.html
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git stash
+Directorio de trabajo y estado de índice WIP on feature/footer: 6917d55 Merge branch 'feature/proyectos' guardados
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git status
+En la rama feature/footer
+nada para hacer commit, el árbol de trabajo está limpio
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git checkout main
+Cambiado a rama 'main'
+Tu rama está actualizada con 'origin/main'.
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git add index.html
+git commit -m "hotfix: fix navbar logo text"
+git push
+[main 6ef4a6d] hotfix: fix navbar logo text
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Enumerando objetos: 5, listo.
+Contando objetos: 100% (5/5), listo.
+Compresión delta usando hasta 6 hilos
+Comprimiendo objetos: 100% (3/3), listo.
+Escribiendo objetos: 100% (3/3), 389 bytes | 389.00 KiB/s, listo.
+Total 3 (delta 1), reusados 0 (delta 0), pack-reusados 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/dgutlop/HerramientasColaborativas2.git
+   6917d55..6ef4a6d  main -> main
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git checkout feature/footer
+Cambiado a rama 'feature/footer'
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git stash pop
+En la rama feature/footer
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+        modificados:     index.html
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+Descartado refs/stash@{0} (87b9f0c581ce82b066cd0d76e5ed34a9deb4b575)
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git status
+En la rama feature/footer
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+        modificados:     index.html
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git add index.html
+git commit -m "feat: add footer section"
+git push -u origin feature/footer
+[feature/footer ba5cb52] feat: add footer section
+ 1 file changed, 3 insertions(+)
+Enumerando objetos: 5, listo.
+Contando objetos: 100% (5/5), listo.
+Compresión delta usando hasta 6 hilos
+Comprimiendo objetos: 100% (3/3), listo.
+Escribiendo objetos: 100% (3/3), 442 bytes | 442.00 KiB/s, listo.
+Total 3 (delta 1), reusados 0 (delta 0), pack-reusados 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'feature/footer' on GitHub by visiting:
+remote:      https://github.com/dgutlop/HerramientasColaborativas2/pull/new/feature/footer
+remote: 
+To https://github.com/dgutlop/HerramientasColaborativas2.git
+ * [new branch]      feature/footer -> feature/footer
+rama 'feature/footer' configurada para rastrear 'origin/feature/footer'.
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git stash list
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git log --oneline --decorate --graph -10
+* ba5cb52 (HEAD -> feature/footer, origin/feature/footer) feat: add footer section
+*   6917d55 Merge branch 'feature/proyectos'
+|\  
+| * 8422283 (feature/proyectos) Actualizado a Ingeniero de Software
+| *   10b2d64 (origin/feature/proyectos) Merge branch 'main' into feature/proyectos
+| |\  
+| * | eee76f1 Actualizando HTML
+| * | f74e1e4 CSS: Añadir seccion de proyectos
+| * | ad74eb8 Añadir seccion de proyectos
+* | | 7e8273b Especialista en Web
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ 
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git log --graph --all --oneline --decorate
+* ba5cb52 (HEAD -> feature/footer, origin/feature/footer) feat: add footer section
+| * 6ef4a6d (origin/main, main) hotfix: fix navbar logo text
+|/  
+*   6917d55 Merge branch 'feature/proyectos'
+|\  
+| * 8422283 (feature/proyectos) Actualizado a Ingeniero de Software
+| *   10b2d64 (origin/feature/proyectos) Merge branch 'main' into feature/proyectos
+| |\  
+| * | eee76f1 Actualizando HTML
+| * | f74e1e4 CSS: Añadir seccion de proyectos
+| * | ad74eb8 Añadir seccion de proyectos
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git diff
+diff --git a/style.css b/style.css
+index b98d96a..efea6ef 100644
+--- a/style.css
++++ b/style.css
+@@ -12,7 +12,7 @@ body {
+ .navbar {
+   background: var(--primary);
+   color: white;
+-  padding: 1rem;
++  padding: 2rem;
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ 
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git log --since="30 minutes ago" --oneline --decorate
+ba5cb52 (HEAD -> feature/footer, origin/feature/footer) feat: add footer section
+6917d55 Merge branch 'feature/proyectos'
+7e8273b Especialista en Web
+8422283 (feature/proyectos) Actualizado a Ingeniero de Software
+10b2d64 (origin/feature/proyectos) Merge branch 'main' into feature/proyectos
+5d62afe Añadir index.html
+b3ce6be Creacion de rama hotfix:cambio de color
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git log --stat
+commit ba5cb5271e2deb3b75642ece2986495ab504847c (HEAD -> feature/footer, origin/feature/footer)
+Author: dgutlop <dgutlop5@gmail.com>
+Date:   Fri Feb 13 10:04:17 2026 +0100
+
+    feat: add footer section
+
+ index.html | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 6917d5576429100df391afe6655ef091e85f6238
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ 
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git log --shortstat
+commit ba5cb5271e2deb3b75642ece2986495ab504847c (HEAD -> feature/footer, origin/feature/footer)
+Author: dgutlop <dgutlop5@gmail.com>
+Date:   Fri Feb 13 10:04:17 2026 +0100
+
+    feat: add footer section
+
+ 1 file changed, 3 insertions(+)
+
+commit 6917d5576429100df391afe6655ef091e85f6238
+Merge: 7e8273b 8422283
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git log --oneline --grep="hotfix"
+b3ce6be Creacion de rama hotfix:cambio de color
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git show b3ce6be
+commit b3ce6be6b2c7891f927d9d9e5b4a981ddd0fb3e3
+Author: dgutlop <dgutlop5@gmail.com>
+Date:   Fri Feb 13 09:43:02 2026 +0100
+
+    Creacion de rama hotfix:cambio de color
+
+diff --git a/style.css b/style.css
+index e69de29..8351381 100644
+--- a/style.css
++++ b/style.css
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ 
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git checkout main
+git pull
+M       style.css
+Cambiado a rama 'main'
+Tu rama está actualizada con 'origin/main'.
+Ya está actualizado.
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git branch
+  feature/footer
+  feature/proyectos
+* main
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git merge feature/footer
+Auto-fusionando index.html
+Merge made by the 'ort' strategy.
+ index.html | 3 +++
+ 1 file changed, 3 insertions(+)
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git push
+Enumerando objetos: 7, listo.
+Contando objetos: 100% (7/7), listo.
+Compresión delta usando hasta 6 hilos
+Comprimiendo objetos: 100% (3/3), listo.
+Escribiendo objetos: 100% (3/3), 419 bytes | 419.00 KiB/s, listo.
+Total 3 (delta 1), reusados 0 (delta 0), pack-reusados 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/dgutlop/HerramientasColaborativas2.git
+   6ef4a6d..60d360c  main -> main
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git tag -a v1.0 -m "Primera entrega del Portfolio"
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git tag
+v1.0
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git show v1.0
+tag v1.0
+Tagger: dgutlop <dgutlop5@gmail.com>
+Date:   Fri Feb 13 10:09:15 2026 +0100
+
+Primera entrega del Portfolio
+
+commit 60d360c60c23caf6f7e092e7a98d22366aefd203 (HEAD -> main, tag: v1.0, origin/main)
+Merge: 6ef4a6d ba5cb52
+Author: dgutlop <dgutlop5@gmail.com>
+Date:   Fri Feb 13 10:08:57 2026 +0100
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ 
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git add style.css
+git commit -m "style: update font family"
+[main 8e7c985] style: update font family
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git push
+Enumerando objetos: 5, listo.
+Contando objetos: 100% (5/5), listo.
+Compresión delta usando hasta 6 hilos
+Comprimiendo objetos: 100% (3/3), listo.
+Escribiendo objetos: 100% (3/3), 313 bytes | 313.00 KiB/s, listo.
+Total 3 (delta 2), reusados 0 (delta 0), pack-reusados 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/dgutlop/HerramientasColaborativas2.git
+   60d360c..8e7c985  main -> main
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git tag v1.1
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git tag
+v1.0
+v1.1
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git push --tags
+Enumerando objetos: 1, listo.
+Contando objetos: 100% (1/1), listo.
+Escribiendo objetos: 100% (1/1), 167 bytes | 167.00 KiB/s, listo.
+Total 1 (delta 0), reusados 0 (delta 0), pack-reusados 0
+To https://github.com/dgutlop/HerramientasColaborativas2.git
+ * [new tag]         v1.0 -> v1.0
+ * [new tag]         v1.1 -> v1.1
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ git push
+Everything up-to-date
+alumno05@alumno05-HP-ProDesk:~/git/GITHUB/portfolio-git$ 
